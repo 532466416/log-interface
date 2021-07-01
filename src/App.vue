@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <LogHandle />
+    <StudioLog />
   </div>
 </template>
 
 <script>
-import LogHandle from "./components/LogHandle.vue";
+import StudioLog from "./components/StudioLog/index.vue";
 
 export default {
   name: "App",
   components: {
-    LogHandle,
+    StudioLog,
   },
 };
 </script>
@@ -20,6 +20,7 @@ export default {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
   ::-webkit-scrollbar {
     width: 8px;
     height: 10px;

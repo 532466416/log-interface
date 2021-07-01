@@ -41,7 +41,7 @@
   </div>
 </template>
 <script>
-import requestApi from "../request";
+import requestApi from "../../request";
 export default {
   name: "LogHandle",
   data() {
@@ -104,7 +104,6 @@ export default {
             this.resultData = result.data;
           },
           (err) => {
-            console.log(err);
             this.resultFailure = true
             this.resultMsg = err
             this.loading = false;

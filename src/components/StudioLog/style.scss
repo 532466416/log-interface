@@ -1,0 +1,220 @@
+$--color-primary:#409eff;
+
+.log-query {
+  height: 100%;
+  min-width: 800px;
+
+  .header {
+    height: 83px;
+    line-height: 83px;
+    padding: 0 15px;
+    border-bottom: 1px solid rgba(228, 228, 228, 1);
+    background-color: rgba(251, 251, 251, 1);
+
+    .title {
+      font-size: 18px;
+      font-weight: 200;
+    }
+
+    .el-input {
+      width: 70%;
+      margin-left: 12px;
+
+      .el-select {
+        width: 100px;
+
+        /deep/.el-input--small .el-input__inner {
+          height: 31px;
+        }
+      }
+
+      .time-select {
+        min-width: 115px;
+        border-right: 1px solid #dcdfe6;
+      }
+
+      .custom-select {
+        width: 330px;
+      }
+
+      .el-button {
+        margin-left: 16px;
+
+        &:hover {
+          color: $--color-primary;
+        }
+      }
+    }
+
+    .result-total {
+      margin-left: 10px;
+    }
+
+    .button-download {
+      margin-left: 3px;
+
+      i {
+        font-size: 18px;
+        vertical-align: middle;
+      }
+
+      span {
+        margin-left: -5px;
+      }
+    }
+  }
+
+  .content {
+    padding: 5px 24px;
+    height: calc(100% - 83px);
+
+    .no-result {
+      text-align: center;
+      color: #aeaeae;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+
+      .icon-help {
+        font-size: 32px;
+        margin-bottom: 12px;
+      }
+
+      p {
+        margin: 2px 0;
+      }
+    }
+
+    .result {
+      height: 100%;
+
+      .list-row {
+        display: flex;
+        border-bottom: 1px solid rgba(228, 228, 228, 1);
+
+        .row-operate {
+          flex: 0 0 20px;
+          text-align: center;
+        }
+
+        .row-time {
+          flex: 0 0 230px;
+          padding: 0 5px;
+        }
+
+        .row-detail {
+          flex: 0 0 130px;
+          margin-left: auto;
+        }
+      }
+
+      .list-header {
+        height: 40px;
+        line-height: 40px;
+
+        .row-content {
+          padding: 0 5px;
+        }
+
+        .icon-setting:hover {
+          cursor: pointer;
+        }
+      }
+
+      .list-content {
+        height: calc(100% - 100px);
+        overflow: auto;
+
+        .list-row {
+
+          &:hover {
+            background-color: #F5F7FA;
+
+            .row-detail .el-button {
+              display: inline-block;
+            }
+          }
+
+          &,
+          .el-button {
+            color: #666666;
+          }
+
+          .row-operate,
+          .row-time,
+          .row-detail {
+            height: 70px;
+            line-height: 70px;
+          }
+          .row-detail{
+            padding-left: 15px;
+            .el-button {
+              display: none;
+              color: $--color-primary;
+            }
+          }
+
+          .row-content {
+
+            .log-text {
+              position: relative;
+              top: 50%;
+              transform: translateY(-50%);
+              word-break: break-all;
+            }
+
+            .log-text-auto {
+              max-height: 70px;
+              overflow: hidden;
+              display: -webkit-box;
+              text-overflow: ellipsis;
+              -webkit-line-clamp: 3; //超出3行隐藏并显示省略号
+              -webkit-box-orient: vertical;
+            }
+
+            .log-text-an{
+              padding: 20px 0;
+            }
+          }
+        }
+      }
+
+      .el-pagination {
+        margin-top: 15px;
+        margin-right: 10px;
+        text-align: right;
+      }
+    }
+  }
+
+}
+
+.detail-dialog {
+  /deep/ .el-dialog__body {
+    padding: 10px 20px;
+  }
+
+  .detail-content {
+    height: 35vh;
+    overflow: auto;
+    padding-right: 6px;
+  }
+
+  .detail-no-data {
+    line-height: 35vh;
+    text-align: center;
+    color: #909399;
+  }
+}
+
+.custom-time-select {
+.el-dialog{
+  width: 450px;
+}
+  /deep/ .el-dialog__body {
+    .el-input__icon,
+    .el-range-separator {
+      line-height: 32px;
+    }
+  }
+}
